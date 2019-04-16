@@ -34,6 +34,6 @@ client.on("disconnect", ()=>{
 
 
 
-server.listen(port, (req,res)=>{
+server.listen(port, ()=>{
     console.log(`Server connected on ${port}`)
 })

@@ -1,4 +1,4 @@
-var socket= io("http://localhost:3000")
+var socket= io();
 socket.on("connect", ()=>{
     console.log("connected to server")
 
