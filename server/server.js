@@ -6,7 +6,7 @@ const app= express();
 const server= http.createServer(app);
 const io = socketIO(server)
 
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || process.env.IP;
 
 const filePath= path.join(__dirname , "../client");
 
@@ -34,6 +34,6 @@ client.on("disconnect", ()=>{
 
 
 
-server.listen(port, ()=>{
+server.listen(port, (req,res)=>{
     console.log(`Server connected on ${port}`)
 })
