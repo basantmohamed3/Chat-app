@@ -18,11 +18,12 @@ io.on("connection", (client)=>{
     console.log("client is connected")
 
 client.on ("newMessage", (message)=>{
-    console.log(`hello ${message.from}`)
+    console.log(message)
  client.emit ("welcomeMessage", {
      from:"Admin",
      text:`hello ${message.from} I am the Admin`
  })   
+ client.broadcast.emit ("welcomeMessage", "A new user was added")
 })
 
 
